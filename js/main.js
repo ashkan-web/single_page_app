@@ -65,3 +65,30 @@ const Session = {
 };
 
 Session.create({ email: "js@winterfell.gov", password: "supersecret" });
+
+// Testing Endpoints
+if (false) {
+  // Get all questions
+  Question.all().then(questions => console.info(questions));
+  // Get a single question
+  Question.one(180).then(question => console.info(question));
+
+  // Create a question
+  const newQuestion = {
+    title: "New Question Title",
+    body: "New Question Body"
+  };
+
+  Question.create(newQuestion);
+
+  // update a question 201
+  const updateQuestion = {
+    title: "Updated Question Title",
+    body: "Updated Question Body"
+  };
+
+  Question.update(201, updateQuestion);
+
+  // Delete a question
+  Question.destroy(201);
+}
